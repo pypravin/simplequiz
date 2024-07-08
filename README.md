@@ -1,6 +1,6 @@
-# quiz
+# myquiz
 
-A new Flutter project.
+A new quizz app
 
 ## Getting Started
 
