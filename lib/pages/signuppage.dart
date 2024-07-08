@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:myquiz/login.dart';
+import 'package:myquiz/pages/loginpage.dart'; // Ensure this import path is correct
 
-class PasswordReset extends StatelessWidget {
-  const PasswordReset({super.key});
+class Signup extends StatelessWidget {
+  const Signup({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,10 +25,12 @@ class PasswordReset extends StatelessWidget {
                     TextField(
                       style: TextStyle(fontSize: 20),
                       decoration: InputDecoration(
-                        labelText: 'Enter Your Email',
-                        prefixIcon: Icon(Icons.person_2_outlined),
+                        labelText: 'First Name',
+                        prefixIcon: Icon(Icons.person),
                         labelStyle: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold),
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ],
@@ -39,11 +41,28 @@ class PasswordReset extends StatelessWidget {
                 child: Column(
                   children: [
                     TextField(
-                      obscureText: true,
                       style: TextStyle(fontSize: 20),
                       decoration: InputDecoration(
-                        labelText: 'Enter Your Password',
-                        prefixIcon: Icon(Icons.password),
+                        labelText: 'Last Name',
+                        prefixIcon: Icon(Icons.person),
+                        labelStyle: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const Padding(
+                padding: EdgeInsets.all(10),
+                child: Column(
+                  children: [
+                    TextField(
+                      style: TextStyle(fontSize: 20),
+                      decoration: InputDecoration(
+                        labelText: 'Enter Your Email',
+                        prefixIcon: Icon(Icons.email),
                         labelStyle: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
@@ -61,8 +80,8 @@ class PasswordReset extends StatelessWidget {
                       obscureText: true,
                       style: TextStyle(fontSize: 20),
                       decoration: InputDecoration(
-                        labelText: 'Confirm Your Password',
-                        prefixIcon: Icon(Icons.password),
+                        labelText: 'Enter Your Password',
+                        prefixIcon: Icon(Icons.lock),
                         labelStyle: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
@@ -78,16 +97,18 @@ class PasswordReset extends StatelessWidget {
                   ElevatedButton(
                     onPressed: () {
                       Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const Success()));
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const SignupSuccess(),
+                        ),
+                      );
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.amberAccent,
                       minimumSize: const Size(300, 50),
                     ),
                     child: const Text(
-                      "Reset",
+                      "Sign Up",
                       style: TextStyle(fontSize: 20, color: Colors.black),
                     ),
                   ),
@@ -101,8 +122,8 @@ class PasswordReset extends StatelessWidget {
   }
 }
 
-class Success extends StatelessWidget {
-  const Success({super.key});
+class SignupSuccess extends StatelessWidget {
+  const SignupSuccess({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -112,8 +133,13 @@ class Success extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text('Password Reset Success. Please Login',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
-            const SizedBox(height: 10,),
+            const Text(
+              'Signup Success. Please Login',
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(

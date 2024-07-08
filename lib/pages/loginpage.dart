@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:myquiz/home.dart';
-import 'package:myquiz/password_reset.dart';
-import 'package:myquiz/signup.dart';
+import 'homepage.dart';
+import 'password_resetpage.dart';
+import 'signuppage.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
