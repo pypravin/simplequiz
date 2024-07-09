@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myquiz/home.dart';
+import 'package:myquiz/pages/home.dart';
 import 'package:myquiz/password_reset.dart';
 import 'package:myquiz/signup.dart';
 
