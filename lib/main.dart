@@ -17,6 +17,7 @@ class Quizz extends StatelessWidget {
         centerTitle: true,),
         body: const Login(),
       ),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

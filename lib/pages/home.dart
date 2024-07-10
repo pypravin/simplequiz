@@ -11,7 +11,7 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         title: const Text(
           "Quiz and rizz",
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28),
         ),
         backgroundColor: Colors.amberAccent,
         elevation: 1,
@@ -47,7 +47,7 @@ class Home extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   padding:
                       const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-                  backgroundColor: Colors.amber,
+                  backgroundColor: Colors.amberAccent,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(60),
                   ), // Button color
@@ -59,11 +59,16 @@ class Home extends StatelessWidget {
                     Icon(
                       Icons.play_arrow,
                       color: Colors.white,
+                      size: 40,
                     ),
                     // Icon widget
                     SizedBox(width: 10),
                     // SizedBox for spacing between icon and text
-                    Text('PLAY', style: TextStyle(fontSize: 30)),
+                    Text('PLAY',
+                        style: TextStyle(
+                            fontSize: 30,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold)),
                     // Text widget
                   ],
                 ),
@@ -73,7 +78,6 @@ class Home extends StatelessWidget {
             const SizedBox(height: 10),
 
             //EXIT BUTTON
-            //PLAY BUTTON
             SizedBox(
               width: 160,
               height: 80,
@@ -104,8 +108,8 @@ class Home extends StatelessWidget {
                 },
                 style: ElevatedButton.styleFrom(
                   padding:
-                  const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-                  backgroundColor: Colors.amber,
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                  backgroundColor: Colors.amberAccent,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(60),
                   ), // Button color
@@ -115,13 +119,18 @@ class Home extends StatelessWidget {
                   // Ensure the Row only takes up as much space as needed
                   children: [
                     Icon(
-                      Icons.play_arrow,
+                      Icons.exit_to_app,
                       color: Colors.white,
+                      size: 40,
                     ),
                     // Icon widget
                     SizedBox(width: 10),
                     // SizedBox for spacing between icon and text
-                    Text('EXIT', style: TextStyle(fontSize: 30)),
+                    Text('EXIT',
+                        style: TextStyle(
+                            fontSize: 30,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold)),
                     // Text widget
                   ],
                 ),
@@ -139,7 +148,7 @@ class Home extends StatelessWidget {
           ],
         ),
       ),
-      backgroundColor: const Color(0xfffff1c9),
+      backgroundColor: Colors.white,
     );
   }
 }
