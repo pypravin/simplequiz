@@ -25,12 +25,12 @@ class Home extends StatelessWidget {
               padding: const EdgeInsets.all(16.0),
               child: Image.asset(
                 "assets/images/trivia_logo.png",
-                width: 300,
-                height: 300,
+                width: 170,
+                height: 170,
               ),
             ),
             const SizedBox(
-              height: 20,
+              height: 10,
             ),
 
             //PLAY BUTTON
@@ -104,7 +104,7 @@ class Home extends StatelessWidget {
                 },
                 style: ElevatedButton.styleFrom(
                   padding:
-                  const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
                   backgroundColor: Colors.amber,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(60),
